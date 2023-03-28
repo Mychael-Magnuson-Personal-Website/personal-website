@@ -9,17 +9,55 @@ STYLING FOR THE INDEX.HTML FILE
 ****************************** */
 body {
   background-color: #dbe4ff;
+  margin: 0;
 }
 main {
   width: 75%;
   margin: 0 auto;
   background-color: #c3fae8;
 }
+h1 {
+  margin: 0;
+  font-size: 3em;
+  font-weight: 500;
+}
+.header-flex-cont {
+  display: flex;
+  flex-flow: row wrap;
 
+  margin: 0;
+  padding: 0.5em 1.5em;
+  background-color: #ffd8a8;
+  justify-content: space-between;
+}
+.nav-cont {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+  font-size: 1.6em;
+  padding-left: 0;
+  align-content: center;
+  margin: 0 0.5em 0 0;
+}
+
+.nav-cont ul {
+  list-style: none;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  margin: 0;
+  color: #d0bfff;
+}
+.nav-link:hover,
+.nav-link:active {
+  color: #845ef7;
+}
 /********************************
 STYLING FOR THE ABOUT.HTML FILE 
 ****************************** */
 
 /***********************************
 STYLING FOR THE PORTFOLIO.HTML FILE 
-********************************* */
+********************************* */ ;
