@@ -7,20 +7,20 @@
     <title>Mychael Magnuson Personal Website</title>
   </head>
   <body>
-    <header>
+    <header class="header-flex-cont">
       <!-- For uniformality we can include this header on all the html files and add 
         a class to style them the same so it looks smooth going across all pages  -->
       <h1>Mychael Magnuson</h1>
       <!-- Create an element that will hold three tabs for navigating between pages. 
       Pages should include "Home", "About", and "Portfolio" -->
-      <div>
+      <div class="nav-cont">
         <ul>
           <!-- Link to the index.html -->
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
           <!-- Link to the about.html -->
-          <li><a href="#">About</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
           <!-- Link to the portfolio.html -->
-          <li><a href="#">Portfolio</a></li>
+          <li><a href="#" class="nav-link">Portfolio</a></li>
         </ul>
       </div>
     </header>
@@ -30,20 +30,23 @@
         <img
           src="img/personalPhoto.JPG"
           alt="Personal portrait of Mychael Magnuson"
+          id="index-portrait"
         />
-        <h3>Leader, Student, Future Developer</h3>
+        <h3 id="index-content-1">Leader, Student, Future Developer</h3>
         <!-- ADD: A mission statement/quote/core value -->
-        <p>
+        <p id="index-content-2">
           Determined to become a Developer and prove my skills. Interested in
           sharing my skills and passion to work and collaborate in effective
           teams for successful project outcomes.
         </p>
         <!-- NEED: An element to hold text --><!-- ADD: Something that defines you -->
-        <p>
+        <p id="index-content-3">
           “All We Have To Decide Is What To Do With The Time That Is Given To
           Us.”
         </p>
-        <p>Gandalf the Grey, 'The Fellowship of the Ring' (2001)</p>
+        <p id="index-content-4">
+          Gandalf the Grey, 'The Fellowship of the Ring' (2001)
+        </p>
       </section>
     </main>
   </body>
