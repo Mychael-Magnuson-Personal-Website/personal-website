@@ -1,0 +1,25 @@
+/*************************************
+Setting Global rules for all the files
+**************************************/
+* {
+  font-family: "Oswald", sans-serif;
+}
+/********************************
+STYLING FOR THE INDEX.HTML FILE 
+****************************** */
+body {
+  background-color: #dbe4ff;
+}
+main {
+  width: 75%;
+  margin: 0 auto;
+  background-color: #c3fae8;
+}
+
+/********************************
+STYLING FOR THE ABOUT.HTML FILE 
+****************************** */
+
+/***********************************
+STYLING FOR THE PORTFOLIO.HTML FILE 
+********************************* */
