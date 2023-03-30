@@ -5,20 +5,24 @@ Setting Global rules for all the files
   font-family: "Oswald", sans-serif;
   margin: 0;
 }
+body {
+  background-color: #fffcf8;
+  margin: 0;
+}
+main {
+  background-color: #fffcf8;
+}
 /********************************
 STYLING FOR THE INDEX.HTML FILE 
 ****************************** */
-body {
-  background-color: #f1f3f5;
-  margin: 0;
-}
 
 /* Styling the header */
 h1 {
   margin: 0;
   font-size: 4em;
   font-weight: 500;
-  color: #e47112;
+  /* color: #e47112; */
+  color: #cd6610;
 }
 .header-flex-cont {
   display: flex;
@@ -59,13 +63,15 @@ h1 {
   background-color: #fffcf8;
   display: flex;
   flex-flow: row wrap;
-  gap: 2em;
-  padding-top: 2em;
+  justify-content: space-between;
+  padding-top: 2.5em;
+  width: 85%;
+  margin: 0 auto;
 }
 #index-img-div {
-  width: 45%;
+  width: 50%;
   height: auto;
-  margin-left: 1.5em;
+  align-self: center;
 }
 #index-portrait {
   width: 100%;
@@ -77,11 +83,14 @@ h1 {
 }
 #index-content-1 {
   font-size: 3em;
-  color: #e19e05;
+  font-weight: 500;
+  /* color: #e19e05; */
+  color: #e47112;
   margin-bottom: 1em;
 }
 #index-content-2 {
   font-size: 2em;
+  font-weight: 400;
   padding: 1em 0;
   margin-right: 1em;
   margin-bottom: 5em;
@@ -89,11 +98,13 @@ h1 {
 }
 #index-content-3 {
   font-size: 1.8em;
+  font-weight: 500;
   padding: 1em 0;
-  color: #cd6610;
+  color: #e47112;
 }
 #index-content-4 {
   font-size: 1.2em;
+  font-weight: 400;
   padding: 0 0 0 0.5em;
   color: #2a2f34;
 }
@@ -119,6 +130,45 @@ h1 {
 /********************************
 STYLING FOR THE ABOUT.HTML FILE 
 ****************************** */
+#about-content h3 {
+  font-size: 2.8em;
+  font-weight: 500;
+  color: #e47112;
+  padding-bottom: 1.5em;
+}
+#about-main {
+  width: 85%;
+  margin: 0 auto;
+  padding: 2.5em 0;
+}
+#about-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-bottom: 2em;
+  gap: 1em;
+}
+#about-section img {
+  width: 14%;
+  border-radius: 0.3em;
+}
+#about-section div {
+  width: 84%;
+  align-self: center;
+}
+#about-section h4 {
+  font-size: 2em;
+  font-weight: 500;
+  /* color: #2a2f34; */
+  /* color: #d27528; */
+  color: #c88d04;
+}
+
+#about-section p {
+  font-size: 1.8em;
+  font-weight: 400;
+  color: #55595d;
+}
 
 /***********************************
 STYLING FOR THE PORTFOLIO.HTML FILE 
