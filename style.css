@@ -1,11 +1,213 @@
+/* ************************************
+Setting Global rules for all the files
+**************************************/
+* {
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+}
+body {
+  background-color: #fffcf8;
+  margin: 0;
+}
+main {
+  background-color: #fffcf8;
+}
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+}
+/************************
+Creating a sticky header
+************************/
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  width: 97.5%;
+  opacity: 0.9;
+  transition: all 0.5s;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement 
+(as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 2em;
+}
 /********************************
 STYLING FOR THE INDEX.HTML FILE 
 ****************************** */
 
+/* Styling the header */
+h1 {
+  margin: 0;
+  font-size: 4em;
+  font-weight: 500;
+  /* color: #e47112; */
+  color: #cd6610;
+}
+.header-flex-cont {
+  margin: 0;
+  padding: 0.5em 1.5em;
+  background-color: #fffcf8;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+/* Navigation Stylilng */
+.nav-cont {
+  gap: 1em;
+  font-size: 1.6em;
+  padding-left: 0;
+  align-content: center;
+  margin: 0 0.5em 0 0;
+}
+
+/* Home, About, Portfolio link styling  */
+.nav-cont ul {
+  list-style: none;
+}
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  margin: 0;
+  color: #fab005;
+  transition: all 0.5s;
+}
+.nav-link:hover,
+.nav-link:active {
+  color: #cd6610;
+}
+/* Styling main content */
+#index-content-cont {
+  background-color: #fffcf8;
+  justify-content: space-between;
+  padding-top: 2em;
+  width: 85%;
+  margin: 0 auto;
+}
+#index-img-div {
+  width: 50%;
+  height: auto;
+  align-self: center;
+}
+#index-portrait {
+  width: 100%;
+  border-radius: 0.3em;
+}
+#index-content-div {
+  width: 45%;
+  margin-top: 3em;
+}
+#index-content-1 {
+  font-size: 3em;
+  font-weight: 500;
+  /* color: #e19e05; */
+  color: #e47112;
+  margin-bottom: 1em;
+}
+#index-content-2 {
+  font-size: 2em;
+  font-weight: 400;
+  padding: 1em 0;
+  margin-right: 1em;
+  margin-bottom: 5em;
+  color: #343a40;
+}
+#index-content-3 {
+  font-size: 1.8em;
+  font-weight: 500;
+  padding: 1em 0;
+  color: #e47112;
+}
+#index-content-4 {
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 0 0 0 0.5em;
+  color: #2a2f34;
+}
+
+/* Footer styling */
+
+#footer-cont {
+  justify-content: space-between;
+  padding: 3em 1.5em 1em 1.5em;
+  background-color: #fffcf8;
+}
+#logos {
+  gap: 2.5em;
+}
+.ionicon {
+  width: 30px;
+}
+
 /********************************
 STYLING FOR THE ABOUT.HTML FILE 
 ****************************** */
+#about-content h3 {
+  font-size: 2.8em;
+  font-weight: 500;
+  color: #e47112;
+  padding-bottom: 1.5em;
+}
+#about-main {
+  width: 85%;
+  margin: 0 auto;
+  padding: 2.5em 0;
+}
+.about-section {
+  justify-content: space-between;
+  padding-bottom: 2em;
+  gap: 1em;
+}
+.about-section img {
+  width: 14%;
+  border-radius: 0.3em;
+}
+.about-section div {
+  width: 84%;
+  align-self: center;
+}
+.about-section h4 {
+  font-size: 2em;
+  font-weight: 500;
+  color: #c88d04;
+}
+
+.about-section p {
+  font-size: 1.8em;
+  font-weight: 400;
+  color: #55595d;
+}
 
 /***********************************
 STYLING FOR THE PORTFOLIO.HTML FILE 
 ********************************* */
+#portfolio-main {
+  width: 95%;
+  margin: 0 auto;
+  padding: 2.5em 0;
+}
+.portfolio-flex-cont {
+  gap: 2em;
+}
+.portfolio-content-div {
+  width: 29%;
+}
+.portfolio-content-div h3 {
+  font-size: 3em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  color: #e47112;
+}
+.portfolio-content-div p {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #55595d;
+}
+
+.portfolio-img {
+  display: inline-block;
+  width: 69%;
+}
+.portfolio-img img {
+  width: 100%;
+}
