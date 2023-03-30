@@ -210,4 +210,5 @@ STYLING FOR THE PORTFOLIO.HTML FILE
 }
 .portfolio-img img {
   width: 100%;
+  border-radius: 0.5em;
 }
