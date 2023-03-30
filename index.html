@@ -13,14 +13,14 @@
     <title>Mychael Magnuson Personal Website</title>
   </head>
   <body>
-    <header class="header-flex-cont">
+    <header class="header-flex-cont flex-row">
       <!-- For uniformality we can include this header on all the html files and add 
         a class to style them the same so it looks smooth going across all pages  -->
       <h1>Mychael Magnuson</h1>
       <!-- Create an element that will hold three tabs for navigating between pages. 
       Pages should include "Home", "About", and "Portfolio" -->
-      <div class="nav-cont">
-        <ul class="nav-cont">
+      <div class="nav-cont flex-row">
+        <ul class="nav-cont flex-row">
           <!-- Link to the index.html -->
           <li><a href="index.html" class="nav-link">Home</a></li>
           <!-- Link to the about.html -->
@@ -31,7 +31,7 @@
       </div>
     </header>
     <main>
-      <section id="index-content-cont">
+      <section id="index-content-cont" class="flex-row">
         <div id="index-img-div">
           <!-- ADD: At least one photo --><!-- NEED: <img/> -->
           <img
@@ -61,9 +61,9 @@
       </section>
     </main>
     <footer>
-      <div id="footer-cont">
+      <div id="footer-cont" class="flex-row">
         <p>Copyright &copy; Mychael Magnuson 2023</p>
-        <div id="logos">
+        <div id="logos" class="flex-row">
           <a
             href="https://github.com/Mychael-FEWD"
             target="_blank"
