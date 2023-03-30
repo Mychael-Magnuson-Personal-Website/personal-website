@@ -16,6 +16,21 @@ main {
   display: flex;
   flex-flow: row wrap;
 }
+/************************
+Creating a sticky header
+************************/
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  width: 97.5%;
+  opacity: 0.9;
+  transition: all 0.5s;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement 
+(as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 2em;
+}
 /********************************
 STYLING FOR THE INDEX.HTML FILE 
 ****************************** */
@@ -33,6 +48,8 @@ h1 {
   padding: 0.5em 1.5em;
   background-color: #fffcf8;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
 }
 /* Navigation Stylilng */
 .nav-cont {
@@ -62,7 +79,7 @@ h1 {
 #index-content-cont {
   background-color: #fffcf8;
   justify-content: space-between;
-  padding-top: 2.5em;
+  padding-top: 2em;
   width: 85%;
   margin: 0 auto;
 }
