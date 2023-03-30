@@ -12,6 +12,10 @@ body {
 main {
   background-color: #fffcf8;
 }
+.flex-row {
+  display: flex;
+  flex-flow: row wrap;
+}
 /********************************
 STYLING FOR THE INDEX.HTML FILE 
 ****************************** */
@@ -25,8 +29,6 @@ h1 {
   color: #cd6610;
 }
 .header-flex-cont {
-  display: flex;
-  flex-flow: row wrap;
   margin: 0;
   padding: 0.5em 1.5em;
   background-color: #fffcf8;
@@ -34,8 +36,6 @@ h1 {
 }
 /* Navigation Stylilng */
 .nav-cont {
-  display: flex;
-  flex-flow: row wrap;
   gap: 1em;
   font-size: 1.6em;
   padding-left: 0;
@@ -61,8 +61,6 @@ h1 {
 /* Styling main content */
 #index-content-cont {
   background-color: #fffcf8;
-  display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
   padding-top: 2.5em;
   width: 85%;
@@ -112,15 +110,11 @@ h1 {
 /* Footer styling */
 
 #footer-cont {
-  display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
   padding: 3em 1.5em 1em 1.5em;
   background-color: #fffcf8;
 }
 #logos {
-  display: flex;
-  flex-flow: row wrap;
   gap: 2.5em;
 }
 .ionicon {
@@ -141,30 +135,26 @@ STYLING FOR THE ABOUT.HTML FILE
   margin: 0 auto;
   padding: 2.5em 0;
 }
-#about-section {
-  display: flex;
-  flex-flow: row wrap;
+.about-section {
   justify-content: space-between;
   padding-bottom: 2em;
   gap: 1em;
 }
-#about-section img {
+.about-section img {
   width: 14%;
   border-radius: 0.3em;
 }
-#about-section div {
+.about-section div {
   width: 84%;
   align-self: center;
 }
-#about-section h4 {
+.about-section h4 {
   font-size: 2em;
   font-weight: 500;
-  /* color: #2a2f34; */
-  /* color: #d27528; */
   color: #c88d04;
 }
 
-#about-section p {
+.about-section p {
   font-size: 1.8em;
   font-weight: 400;
   color: #55595d;
@@ -172,4 +162,35 @@ STYLING FOR THE ABOUT.HTML FILE
 
 /***********************************
 STYLING FOR THE PORTFOLIO.HTML FILE 
-********************************* */ ;
+********************************* */
+#portfolio-main {
+  width: 95%;
+  margin: 0 auto;
+  padding: 2.5em 0;
+}
+.portfolio-flex-cont {
+  gap: 2em;
+}
+.portfolio-content-div {
+  width: 29%;
+}
+.portfolio-content-div h3 {
+  font-size: 3em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  color: #e47112;
+}
+.portfolio-content-div p {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #55595d;
+}
+
+.portfolio-img {
+  display: inline-block;
+  width: 69%;
+}
+.portfolio-img img {
+  width: 100%;
+}
