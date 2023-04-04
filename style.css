@@ -5,9 +5,16 @@ Setting Global rules for all the files
   font-family: "Oswald", sans-serif;
   margin: 0;
 }
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #fffcf8;
   margin: 0;
+
+  /* Only works if nothing is absolutely positioned in relation to the body */
+  overflow-x: hidden;
 }
 main {
   background-color: #fffcf8;
@@ -21,7 +28,7 @@ Creating a sticky header
 ************************/
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
-  width: 97.5%;
+  /* width: 97.5%; */
   opacity: 0.9;
   transition: all 0.5s;
 }
@@ -51,6 +58,9 @@ h1 {
   position: sticky;
   top: 0;
 }
+.header {
+  position: relative;
+}
 /* Navigation Stylilng */
 .nav-cont {
   gap: 1em;
@@ -58,6 +68,21 @@ h1 {
   padding-left: 0;
   align-content: center;
   margin: 0 0.5em 0 0;
+}
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+  z-index: 9999;
+}
+.icon-mobile-nav {
+  height: 2.5em;
+  width: 2.5em;
+  color: black;
+}
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /* Home, About, Portfolio link styling  */
@@ -214,4 +239,245 @@ STYLING FOR THE PORTFOLIO.HTML FILE
 .portfolio-img img {
   width: 100%;
   border-radius: 0.5em;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1600px) {
+  .portfolio-content-div p {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  .portfolio-content-div h3 {
+    font-size: 2em;
+  }
+  .portfolio-content-div p {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  h1 {
+    font-size: 3em;
+  }
+  .nav-cont {
+    gap: 0.75em;
+    font-size: 1.3em;
+    margin: 0;
+  }
+  main {
+    height: 75vh;
+  }
+  .portfolio-content-div h3 {
+    font-size: 1.5em;
+  }
+  .portfolio-content-div p {
+    font-size: 0.75em;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  .nav-cont {
+    gap: 0.5em;
+    font-size: 1em;
+    margin: 0.5em 0 0 0;
+  }
+  main {
+    height: auto;
+  }
+  .portfolio-flex-cont {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .portfolio-content-div h3 {
+    font-size: 1.5em;
+  }
+  .portfolio-content-div p {
+    font-size: 1em;
+    margin-bottom: 4em;
+  }
+  .portfolio-content-div {
+    width: 95%;
+  }
+  .portfolio-flex-cont {
+    gap: 0.5em;
+  }
+
+  .portfolio-img {
+    width: 95%;
+  }
+  #logos {
+    gap: 2em;
+  }
+  .ionicon {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Mobile navigation */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: #fffcf8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+    margin: 0;
+
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+
+    /* Hide navigation */
+
+    /* Hide visually */
+    opacity: 0;
+
+    /* Make it inaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+  .nav-cont {
+    flex-flow: column wrap;
+    gap: 1.5em;
+    font-size: 1.7em;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    color: #e47112;
+  }
+
+  main {
+    height: auto;
+  }
+  .portfolio-content-div h3 {
+    font-size: 2em;
+  }
+  .portfolio-content-div p {
+    font-size: 1em;
+    margin-bottom: 4em;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+  /* Mobile navigation */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    background-color: #fffcf8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.9;
+    margin: 0;
+
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-cont {
+    flex-flow: column wrap;
+    gap: 1.5em;
+    font-size: 1.7em;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em 0 0 0;
+  }
+  .nav-link:link,
+  .nav-link:visited {
+    color: #e47112;
+  }
+  main {
+    height: auto;
+  }
+  .portfolio-flex-cont {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  .portfolio-content-div {
+    width: 95%;
+  }
+  .portfolio-flex-cont {
+    gap: 0.5em;
+  }
+
+  .portfolio-img {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  #logos {
+    gap: 1.5em;
+  }
+  .ionicon {
+    width: 25px;
+  }
+  .header-flex-cont {
+    padding: 0.5em 1em;
+  }
+}
+@media screen and (max-width: 425px) {
+  .icon-mobile-nav {
+    height: 2em;
+    width: 2em;
+    color: black;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .header-flex-cont {
+    padding: 0.5em 0.75em;
+  }
+  #footer-cont {
+    display: flex;
+    flex-flow: column-reverse wrap;
+    gap: 1.5em;
+    align-items: center;
+  }
+  #logos {
+    gap: 3em;
+  }
+  .ionicon {
+    width: 35px;
+  }
+}
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.75em;
+  }
 }
