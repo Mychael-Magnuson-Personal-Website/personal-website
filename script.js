@@ -12,7 +12,7 @@ window.onscroll = function () {
 let header = document.getElementById("myHeader");
 
 // Get the offset position of the navbar
-let sticky = header.offsetTop + 80;
+let sticky = header.offsetTop;
 
 // Add the sticky class to the header when you reach its scroll position.
 // Remove "sticky" when you leave the scroll position
@@ -23,3 +23,11 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+// Making the mobile button navigation work
+const buttonNavigationElement = document.querySelector(".btn-mobile-nav");
+const headerElement = document.querySelector(".header");
+
+buttonNavigationElement.addEventListener("click", function () {
+  headerElement.classList.toggle("nav-open");
+});
