@@ -10,6 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="script.js" async></script>
     <title>Mychael Magnuson Personal Website</title>
   </head>
@@ -20,7 +28,7 @@
       <h1>Mychael Magnuson</h1>
       <!-- Create an element that will hold three tabs for navigating between pages. 
       Pages should include "Home", "About", and "Portfolio" -->
-      <div class="nav-cont flex-row">
+      <div class="nav-cont flex-row main-nav">
         <ul class="nav-cont flex-row">
           <!-- Link to the index.html -->
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -30,6 +38,21 @@
           <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
         </ul>
       </div>
+      <button class="btn-mobile-nav">
+        <ion-icon
+          class="icon-mobile-nav"
+          name="menu-outline"
+          role="img"
+          aria-label="menu outline"
+        ></ion-icon>
+        <ion-icon
+          class="icon-mobile-nav"
+          name="close-outline"
+          role="img"
+          aria-label="close outline"
+        ></ion-icon>
+      </button>
+    </header>
     </header>
     <main>
       <section id="index-content-cont" class="flex-row content">
