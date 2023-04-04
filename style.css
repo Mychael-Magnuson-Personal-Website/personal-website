@@ -42,7 +42,9 @@ Creating a sticky header
 STYLING FOR THE INDEX.HTML FILE 
 ****************************** */
 
-/* Styling the header */
+/************************************************
+Styling the header; part of the universal header
+************************************************/
 h1 {
   margin: 0;
   font-size: 4em;
@@ -61,7 +63,11 @@ h1 {
 .header {
   position: relative;
 }
-/* Navigation Stylilng */
+
+/*****************************************************************************************
+Navigation Stylilng; part of the universal header; includes styling for mobile navigation
+ *****************************************************************************************/
+
 .nav-cont {
   gap: 1em;
   font-size: 1.6em;
@@ -85,7 +91,10 @@ h1 {
   display: none;
 }
 
-/* Home, About, Portfolio link styling  */
+/*************************************************************
+ Home, About, Portfolio link styling; part of universal header
+*************************************************************/
+
 .nav-cont ul {
   list-style: none;
 }
@@ -100,7 +109,10 @@ h1 {
 .nav-link:active {
   color: #cd6610;
 }
-/* Styling main content */
+
+/*********************************
+Styling main content of index.html 
+**********************************/
 #index-content-cont {
   display: grid;
   grid-template-columns: auto 45%;
@@ -116,7 +128,6 @@ h1 {
   align-self: center;
 }
 #index-img-div {
-  height: auto;
   align-self: center;
   grid-row: span 2;
   width: 100%;
@@ -159,7 +170,9 @@ h1 {
   color: #2a2f34;
 }
 
-/* Footer styling */
+/******************************************************************************************
+ Footer styling; Universal footer, styles on all pages as long as classes/id's are present
+ ******************************************************************************************/
 
 #footer-cont {
   justify-content: space-between;
@@ -176,39 +189,48 @@ h1 {
 /********************************
 STYLING FOR THE ABOUT.HTML FILE 
 ****************************** */
-#about-content h3 {
+#about-main {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2.5em 0;
+}
+#about-main h3 {
   font-size: 2.8em;
   font-weight: 500;
   color: #e47112;
   padding-bottom: 1.5em;
 }
-#about-main {
-  width: 85%;
-  margin: 0 auto;
-  padding: 2.5em 0;
+
+#about-content {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 2em;
+  row-gap: 4em;
 }
-.about-section {
-  justify-content: space-between;
-  padding-bottom: 2em;
-  gap: 1em;
-}
-.about-section img {
-  width: 13%;
+
+#about-content img {
+  width: 100%;
   height: auto;
+  object-fit: cover;
   border-radius: 0.3em;
   /* object-fit: cover; */
 }
-.about-section div {
-  width: 85%;
-  align-self: center;
+.about-txt {
+  grid-column: span 5;
 }
-.about-section h4 {
+
+.about-img {
+  grid-column: span 2;
+}
+.about-txt h4 {
   font-size: 2em;
   font-weight: 500;
   color: #c88d04;
+  margin-bottom: 1em;
 }
 
-.about-section p {
+.about-txt p {
   font-size: 1.8em;
   font-weight: 400;
   color: #55595d;
@@ -251,13 +273,17 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   border-radius: 0.5em;
 }
 
-/* Media Queries */
+/************************/
+/***** Media Queries ****/
+/************************/
 
+/* Adjustment works for larger screen sizes */
 @media screen and (min-width: 1600px) {
   .portfolio-content-div p {
     font-size: 1.5em;
   }
 }
+/* Creating a style breakpoint that works up to a max screen width of 1600px */
 @media screen and (max-width: 1600px) {
   #index-content-cont {
     width: 90%;
@@ -271,6 +297,7 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   }
 }
 
+/* Creating a style breakpoint that works for larger laptops down to regular laptop size at 1024px */
 @media screen and (min-width: 1024px) and (max-width: 1300px) {
   .portfolio-content-div h3 {
     font-size: 2em;
@@ -286,8 +313,35 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   #index-content-3 {
     font-size: 1.5em;
   }
+  #about-main h3 {
+    font-size: 2.5em;
+  }
+
+  .about-txt h4 {
+    font-size: 1.8em;
+  }
+
+  .about-txt p {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 1124px) {
+  #about-main h3 {
+    font-size: 2em;
+  }
+  .about-txt h4 {
+    margin-bottom: 0.5em;
+  }
+  .about-txt {
+    grid-column: span 4;
+  }
+
+  .about-img {
+    grid-column: span 3;
+  }
 }
 
+/* Creating style breakpoints that work for laptop screen size all the way down to tablet screen size */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   h1 {
     font-size: 3em;
@@ -339,6 +393,40 @@ STYLING FOR THE PORTFOLIO.HTML FILE
     grid-column: span 2;
   }
 }
+@media screen and (max-width: 900px) {
+  #about-main h3 {
+    font-size: 2em;
+  }
+
+  #about-content {
+    grid-template-rows: repeat(6, auto);
+    row-gap: 2em;
+  }
+
+  .about-txt {
+    grid-column: span 7;
+    margin-bottom: 3em;
+  }
+
+  .about-txt h4 {
+    font-size: 2em;
+    margin-bottom: 0.25em;
+  }
+
+  .about-txt p {
+    font-size: 1.5em;
+  }
+
+  .about-img {
+    grid-column: span 7;
+  }
+
+  #switch-img {
+    grid-row: 3;
+  }
+}
+
+/* Creating style breakpoints that work for tablet screen size down to large phone sizes */
 
 @media screen and (min-width: 500px) and (max-width: 768px) {
   h1 {
@@ -438,6 +526,20 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   main {
     height: auto;
   }
+
+  #about-main h3 {
+    font-size: 1.75em;
+  }
+
+  .about-txt h4 {
+    font-size: 1.5em;
+    margin-bottom: 0.25em;
+  }
+
+  .about-txt p {
+    font-size: 1.25em;
+  }
+
   .portfolio-content-div h3 {
     font-size: 2em;
   }
@@ -496,6 +598,19 @@ STYLING FOR THE PORTFOLIO.HTML FILE
     width: 95%;
   }
 }
+@media screen and (max-width: 550px) {
+  #about-main h3 {
+    font-size: 1.5em;
+  }
+  .about-txt h4 {
+    font-size: 1.25em;
+    margin-bottom: 0.25em;
+  }
+
+  .about-txt p {
+    font-size: 1em;
+  }
+}
 @media screen and (max-width: 500px) {
   h1 {
     font-size: 2.5em;
@@ -509,7 +624,21 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   .header-flex-cont {
     padding: 0.5em 1em;
   }
+
+  #about-main h3 {
+    font-size: 1.25em;
+  }
+
+  .about-txt h4 {
+    font-size: 1.2em;
+    margin-bottom: 0.25em;
+  }
+
+  .about-txt p {
+    font-size: 1em;
+  }
 }
+/* Creating style breakpoints that work for large phone screens all the way down to normal and small phones */
 @media screen and (max-width: 425px) {
   .icon-mobile-nav {
     height: 2em;
@@ -553,6 +682,9 @@ STYLING FOR THE PORTFOLIO.HTML FILE
     font-size: 1.75em;
   }
   #index-content-cta {
+    padding: 0 0.5em;
+  }
+  #index-content-quote {
     padding: 0 0.5em;
   }
 }
