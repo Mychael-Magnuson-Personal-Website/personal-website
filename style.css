@@ -12,12 +12,17 @@ html {
 body {
   background-color: #fffcf8;
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   /* Only works if nothing is absolutely positioned in relation to the body */
   overflow-x: hidden;
 }
 main {
   background-color: #fffcf8;
+  height: 100%;
+  flex-grow: 1;
 }
 .flex-row {
   display: flex;
@@ -70,7 +75,7 @@ Navigation Stylilng; part of the universal header; includes styling for mobile n
 
 .nav-cont {
   gap: 1em;
-  font-size: 1.6em;
+  font-size: 1.3em;
   padding-left: 0;
   align-content: center;
   margin: 0;
@@ -105,9 +110,23 @@ Navigation Stylilng; part of the universal header; includes styling for mobile n
   color: #fab005;
   transition: all 0.5s;
 }
+#contact-link:link,
+#contact-link:visited {
+  background-color: #d78540;
+  color: #fffcf8;
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+}
+
 .nav-link:hover,
 .nav-link:active {
   color: #cd6610;
+}
+
+#contact-link:hover,
+#contact-link:active {
+  background-color: #cd6610;
+  box-shadow: 0.1em 0.1em 0.2em 0.02em #e1d8d0;
 }
 
 /*********************************
@@ -273,6 +292,77 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   border-radius: 0.5em;
 }
 
+/*****************************************
+Styling the Contact Me Page: contact.html
+*****************************************/
+#contact-main {
+  height: 73vh;
+}
+#contact {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+  align-content: center;
+  margin: 4em auto;
+  gap: 1em;
+}
+#contact-title {
+  align-self: center;
+  font-size: 2em;
+  background-color: #e98d41;
+  color: #fffcf8;
+  padding: 0.25em 0.5em .25em 1em;
+  width: 100%;
+  border-radius: 0.15em;
+  box-shadow: 0.1em 0.1em 0.1em 0.03em #e1d8d0;
+}
+#contact-form {
+  background-color: #e98d41;
+  padding: 1.5em 2em;
+  border-radius: 0.3em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  row-gap: 2em;
+  column-gap: 1.5em;
+  box-shadow: 0.3em 0.3em 0.25em 0.025em #e1d8d0;
+}
+#contact-form label,
+#contact-form input {
+  font-size: 1.5em;
+  color: #2a2f34;
+}
+.contact-input {
+  display: flex;
+  flex-flow: column wrap;
+}
+.contact-input input {
+  border-radius: 0.4em;
+  border: none;
+  width: 95%;
+  padding: 0.25em;
+  font-weight: 300;
+  background-color: #fffcf8;
+}
+.contact-input input::placeholder {
+  opacity: .6;
+  font-weight: 300;
+}
+
+#contact-form input[type="submit"] {
+  border-radius: 0.4em;
+  border: none;
+  width: 99%;
+  height: 2em;
+  align-self: end;
+  background-color: #fffcf8;
+  color: #2a2f34;
+  transition: ease-in-out .25s;
+}
+#contact-form input[type="submit"]:hover {
+  background-color: #ffecd7;
+  
+}
 /************************/
 /***** Media Queries ****/
 /************************/
@@ -282,6 +372,21 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   .portfolio-content-div p {
     font-size: 1.5em;
   }
+}
+@media screen and (min-width: 1440px) {
+  .nav-cont {
+    font-size: 1.5em;
+  }
+  #contact {
+    width: 60%;
+  }
+  #contact-title {
+    font-size: 3em;
+  }
+  #contact-form label,
+#contact-form input {
+  font-size: 2em;
+}
 }
 /* Creating a style breakpoint that works up to a max screen width of 1600px */
 @media screen and (max-width: 1600px) {
@@ -294,6 +399,12 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   #index-content-2 {
     font-size: 1.5em;
     margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 1440px) {
+  #contact-title {
+    font-size: 2em;
+    width: 100%;
   }
 }
 
@@ -324,6 +435,9 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   .about-txt p {
     font-size: 1.4em;
   }
+  #contact {
+    width: 50%;
+  }
 }
 @media screen and (max-width: 1124px) {
   #about-main h3 {
@@ -339,6 +453,12 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   .about-img {
     grid-column: span 3;
   }
+  #contact {
+    width: 55%;
+  }
+  #contact-title {
+    font-size: 1.75em;
+  }
 }
 
 /* Creating style breakpoints that work for laptop screen size all the way down to tablet screen size */
@@ -348,7 +468,7 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   }
   .nav-cont {
     gap: 0.75em;
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 0;
   }
   .portfolio-content-div h3 {
@@ -423,6 +543,9 @@ STYLING FOR THE PORTFOLIO.HTML FILE
 
   #switch-img {
     grid-row: 3;
+  }
+  #contact {
+    width: 60%;
   }
 }
 
@@ -547,7 +670,19 @@ STYLING FOR THE PORTFOLIO.HTML FILE
     font-size: 1em;
     margin-bottom: 4em;
   }
-}
+
+  #contact {
+    width: 85%;
+  }
+  #contact-title {
+    padding: 0.25em 0.5em .25em 1em;
+  }
+  
+  #contact-form label,
+  #contact-form input {
+  font-size: 1.2em;
+  }
+
 @media screen and (min-width: 300px) and (max-width: 500px) {
   /* Mobile navigation */
   .btn-mobile-nav {
@@ -637,6 +772,19 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   .about-txt p {
     font-size: 1em;
   }
+  #contact-title {
+    font-size: 1.5em;
+  }
+  #contact-form {
+    grid-template-rows: repeat(4, auto);
+  }
+  .contact-input {
+    grid-column: span 2;
+  }
+  #contact-form input[type="submit"] {
+    grid-column: span 2;
+    margin-top: 1em;
+  }
 }
 /* Creating style breakpoints that work for large phone screens all the way down to normal and small phones */
 @media screen and (max-width: 425px) {
@@ -686,6 +834,16 @@ STYLING FOR THE PORTFOLIO.HTML FILE
   }
   #index-content-quote {
     padding: 0 0.5em;
+  }
+  #contact {
+    width: 80%;
+  }
+  #contact-form {
+    padding: 1.5em 1em;
+  }
+  .contact-input input {
+    width: 95%;
+    
   }
 }
 @media screen and (max-width: 350px) {

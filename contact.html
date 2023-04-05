@@ -19,11 +19,15 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="script.js" async></script>
-    <title>Mychael Magnuson Personal Website: About Page</title>
+    <title>Mychael Magnuson Personal Website</title>
   </head>
   <body>
     <header class="header-flex-cont flex-row header" id="myHeader">
+      <!-- For uniformality we can include this header on all the html files and add 
+        a class to style them the same so it looks smooth going across all pages  -->
       <h1>Mychael Magnuson</h1>
+      <!-- Create an element that will hold three tabs for navigating between pages. 
+      Pages should include "Home", "About", and "Portfolio" -->
       <div class="nav-cont flex-row main-nav">
         <ul class="nav-cont flex-row">
           <!-- Link to the index.html -->
@@ -54,56 +58,42 @@
         ></ion-icon>
       </button>
     </header>
-    <main id="about-main">
-      <!-- You should include your interests, and things 
-        you are good at, and in general you should pull back enough of the curtain 
-        into your life to interest a potential employer in you as a person. -->
-      <!-- Include Different interests and things about you that will intrigue the reader -->
-      <h3>
-        When I am not working on improving my skills and learning more on my
-        path to become a developer, I enjoy a few passtimes!
-      </h3>
-      <section id="about-content">
-        <img src="img/img-truck.jpg" class="about-img" />
-        <div class="about-txt">
-          <h4>Doing Maintenance On My Truck</h4>
-          <p>
-            I enjoy working on vehicles and doing maintenance myself; my current
-            vehicle, I do all of the work on by myself. Although it may not be
-            too complex, it is something I enjoy doing it as it allows me to see
-            what's actually going on with my vehicle and it is fun to me to see
-            all the different working parts and how they work together.
-            Sometimes it can be really complicated but a good challenge is
-            always fun to problem solve with!
-          </p>
-        </div>
-        <div class="about-txt">
-          <h4>Modifying Ninento Switches</h4>
-          <p>
-            Uniqueness and style are important to me, so I enjoy modifying
-            Nintendo Switches for myself and for my friends as well. As long as
-            they supply the switch and the new casing they want to install I do
-            all the work. Ive modified two regular Nintendo Switches and a
-            Nintendo Switch Lite. It is really fun to take them apart and just
-            seeing all of the different work parts as they come together to
-            create this portable gaming console!
-          </p>
-        </div>
-        <img src="img/img-switch.jpg" id="switch-img" class="about-img" />
-        <img src="img/img-funko.jpg" class="about-img" />
-        <div class="about-txt">
-          <h4>Collecting Funko Pop!'s</h4>
-          <p>
-            I have a small collection of Funko Pops that I have been collecting
-            for the past few years. Although I may have 74 Pops, I only collect
-            ones that I want to and I don't typically just go based off of
-            resale value. About 70% of my collection is Star Wars Funko Pops,
-            and some of my favorite Pops I have are my Stranger Things: Eddie
-            Munson (1250) Pop, my Star Wars: The Ronin (505) Pop, and my Demon
-            Slayer: Inosuke Hashibira (1090 Special Edition) Pop!
-          </p>
-        </div>
-      </section>
+    <main id="contact-main">
+      <div id="contact">
+        <h2 id="contact-title">Feel free to reach out to me below!</h2>
+        <form id="contact-form">
+          <div class="contact-input">
+            <label for="contact-name">Name</label>
+            <input
+              type="text"
+              id="contact-name"
+              name="contact-name"
+              placeholder="Luke Skywalker"
+              required
+            />
+          </div>
+          <div class="contact-input">
+            <label for="contact-email">Email Address</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="contact-email"
+              placeholder="LastJediIV@gmail.com"
+              required
+            />
+          </div>
+          <div class="contact-input">
+            <label for="contact-additional">Additional Info</label>
+            <input
+              type="text"
+              id="contact-additional"
+              name="contact-additional"
+              placeholder="I wanted to reach out to you about... "
+            />
+          </div>
+          <input type="submit" id="contact-submit" />
+        </form>
+      </div>
     </main>
     <footer>
       <div id="footer-cont" class="flex-row">
