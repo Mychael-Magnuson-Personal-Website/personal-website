@@ -31,3 +31,7 @@ const headerElement = document.querySelector(".header");
 buttonNavigationElement.addEventListener("click", function () {
   headerElement.classList.toggle("nav-open");
 });
+
+// Close mobile navigation when link is selected
+if (link.classList.contains("nav-link"))
+  headerElement.classList.toggle("nav-open");

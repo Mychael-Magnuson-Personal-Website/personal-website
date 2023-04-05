@@ -34,7 +34,7 @@ Creating a sticky header
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   /* width: 97.5%; */
-  opacity: 0.9;
+  /* opacity: 0.9; */
   transition: all 0.5s;
 }
 
@@ -64,6 +64,7 @@ h1 {
   justify-content: space-between;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 .header {
   position: relative;
@@ -116,17 +117,20 @@ Navigation Stylilng; part of the universal header; includes styling for mobile n
   color: #fffcf8;
   padding: 0.1em 0.3em;
   border-radius: 0.3em;
+  transition: all 0.5s;
 }
 
 .nav-link:hover,
 .nav-link:active {
   color: #cd6610;
+  transition: all 0.5s;
 }
 
 #contact-link:hover,
 #contact-link:active {
   background-color: #cd6610;
   box-shadow: 0.1em 0.1em 0.2em 0.02em #e1d8d0;
+  transition: all 0.5s;
 }
 
 /*********************************
@@ -311,7 +315,7 @@ Styling the Contact Me Page: contact.html
   font-size: 2em;
   background-color: #e98d41;
   color: #fffcf8;
-  padding: 0.25em 0.5em .25em 1em;
+  padding: 0.25em 0.5em 0.25em 1em;
   width: 100%;
   border-radius: 0.15em;
   box-shadow: 0.1em 0.1em 0.1em 0.03em #e1d8d0;
@@ -345,8 +349,9 @@ Styling the Contact Me Page: contact.html
   background-color: #fffcf8;
 }
 .contact-input input::placeholder {
-  opacity: .6;
+  opacity: 0.6;
   font-weight: 300;
+  z-index: 0;
 }
 
 #contact-form input[type="submit"] {
@@ -357,11 +362,10 @@ Styling the Contact Me Page: contact.html
   align-self: end;
   background-color: #fffcf8;
   color: #2a2f34;
-  transition: ease-in-out .25s;
+  transition: ease-in-out 0.25s;
 }
 #contact-form input[type="submit"]:hover {
   background-color: #ffecd7;
-  
 }
 /************************/
 /***** Media Queries ****/
@@ -384,9 +388,9 @@ Styling the Contact Me Page: contact.html
     font-size: 3em;
   }
   #contact-form label,
-#contact-form input {
-  font-size: 2em;
-}
+  #contact-form input {
+    font-size: 2em;
+  }
 }
 /* Creating a style breakpoint that works up to a max screen width of 1600px */
 @media screen and (max-width: 1600px) {
@@ -623,7 +627,7 @@ Styling the Contact Me Page: contact.html
   }
 
   .nav-open .main-nav {
-    opacity: 1;
+    opacity: 0.9;
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0);
@@ -675,182 +679,182 @@ Styling the Contact Me Page: contact.html
     width: 85%;
   }
   #contact-title {
-    padding: 0.25em 0.5em .25em 1em;
+    padding: 0.25em 0.5em 0.25em 1em;
   }
-  
+
   #contact-form label,
   #contact-form input {
-  font-size: 1.2em;
-  }
-
-@media screen and (min-width: 300px) and (max-width: 500px) {
-  /* Mobile navigation */
-  .btn-mobile-nav {
-    display: block;
-  }
-
-  .main-nav {
-    background-color: #fffcf8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    opacity: 0.9;
-    margin: 0;
-
-    align-items: center;
-    justify-content: center;
-  }
-  .nav-cont {
-    flex-flow: column wrap;
-    gap: 1.5em;
-    font-size: 1.7em;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5em 0 0 0;
-  }
-  .nav-link:link,
-  .nav-link:visited {
-    color: #e47112;
-  }
-  main {
-    height: auto;
-  }
-  .portfolio-flex-cont {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-  }
-  .portfolio-content-div {
-    width: 95%;
-  }
-  .portfolio-flex-cont {
-    gap: 0.5em;
-  }
-
-  .portfolio-img {
-    width: 95%;
-  }
-}
-@media screen and (max-width: 550px) {
-  #about-main h3 {
-    font-size: 1.5em;
-  }
-  .about-txt h4 {
-    font-size: 1.25em;
-    margin-bottom: 0.25em;
-  }
-
-  .about-txt p {
-    font-size: 1em;
-  }
-}
-@media screen and (max-width: 500px) {
-  h1 {
-    font-size: 2.5em;
-  }
-  #logos {
-    gap: 1.5em;
-  }
-  .ionicon {
-    width: 25px;
-  }
-  .header-flex-cont {
-    padding: 0.5em 1em;
-  }
-
-  #about-main h3 {
-    font-size: 1.25em;
-  }
-
-  .about-txt h4 {
     font-size: 1.2em;
-    margin-bottom: 0.25em;
   }
 
-  .about-txt p {
-    font-size: 1em;
-  }
-  #contact-title {
-    font-size: 1.5em;
-  }
-  #contact-form {
-    grid-template-rows: repeat(4, auto);
-  }
-  .contact-input {
-    grid-column: span 2;
-  }
-  #contact-form input[type="submit"] {
-    grid-column: span 2;
-    margin-top: 1em;
-  }
-}
-/* Creating style breakpoints that work for large phone screens all the way down to normal and small phones */
-@media screen and (max-width: 425px) {
-  .icon-mobile-nav {
-    height: 2em;
-    width: 2em;
-    color: black;
-  }
-  h1 {
-    font-size: 2em;
-  }
-  .header-flex-cont {
-    padding: 0.5em 0.75em 0 1em;
-  }
+  @media screen and (min-width: 300px) and (max-width: 500px) {
+    /* Mobile navigation */
+    .btn-mobile-nav {
+      display: block;
+    }
 
-  #index-content-1 {
-    font-size: 1.5em;
+    .main-nav {
+      background-color: #fffcf8;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      opacity: 0.9;
+      margin: 0;
+
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-cont {
+      flex-flow: column wrap;
+      gap: 1.5em;
+      font-size: 1.7em;
+      align-items: center;
+      justify-content: center;
+      margin: 0.5em 0 0 0;
+    }
+    .nav-link:link,
+    .nav-link:visited {
+      color: #e47112;
+    }
+    main {
+      height: auto;
+    }
+    .portfolio-flex-cont {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+    }
+    .portfolio-content-div {
+      width: 95%;
+    }
+    .portfolio-flex-cont {
+      gap: 0.5em;
+    }
+
+    .portfolio-img {
+      width: 95%;
+    }
   }
-  #index-content-2 {
-    font-size: 1em;
+  @media screen and (max-width: 550px) {
+    #about-main h3 {
+      font-size: 1.5em;
+    }
+    .about-txt h4 {
+      font-size: 1.25em;
+      margin-bottom: 0.25em;
+    }
+
+    .about-txt p {
+      font-size: 1em;
+    }
   }
-  #index-content-3 {
-    font-size: 1.25em;
+  @media screen and (max-width: 500px) {
+    h1 {
+      font-size: 2.5em;
+    }
+    #logos {
+      gap: 1.5em;
+    }
+    .ionicon {
+      width: 25px;
+    }
+    .header-flex-cont {
+      padding: 0.5em 1em;
+    }
+
+    #about-main h3 {
+      font-size: 1.25em;
+    }
+
+    .about-txt h4 {
+      font-size: 1.2em;
+      margin-bottom: 0.25em;
+    }
+
+    .about-txt p {
+      font-size: 1em;
+    }
+    #contact-title {
+      font-size: 1.5em;
+    }
+    #contact-form {
+      grid-template-rows: repeat(4, auto);
+    }
+    .contact-input {
+      grid-column: span 2;
+    }
+    #contact-form input[type="submit"] {
+      grid-column: span 2;
+      margin-top: 1em;
+    }
   }
-  #index-content-4 {
-    font-size: 0.75em;
+  /* Creating style breakpoints that work for large phone screens all the way down to normal and small phones */
+  @media screen and (max-width: 425px) {
+    .icon-mobile-nav {
+      height: 2em;
+      width: 2em;
+      color: black;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .header-flex-cont {
+      padding: 0.5em 0.75em 0 1em;
+    }
+
+    #index-content-1 {
+      font-size: 1.5em;
+    }
+    #index-content-2 {
+      font-size: 1em;
+    }
+    #index-content-3 {
+      font-size: 1.25em;
+    }
+    #index-content-4 {
+      font-size: 0.75em;
+    }
+    #footer-cont {
+      display: flex;
+      flex-flow: column-reverse wrap;
+      gap: 1.5em;
+      align-items: center;
+    }
+    #logos {
+      gap: 3em;
+    }
+    .ionicon {
+      width: 35px;
+    }
   }
-  #footer-cont {
-    display: flex;
-    flex-flow: column-reverse wrap;
-    gap: 1.5em;
-    align-items: center;
+  @media screen and (max-width: 375px) {
+    h1 {
+      font-size: 1.75em;
+    }
+    #index-content-cta {
+      padding: 0 0.5em;
+    }
+    #index-content-quote {
+      padding: 0 0.5em;
+    }
+    #contact {
+      width: 80%;
+    }
+    #contact-form {
+      padding: 1.5em 1em;
+    }
+    .contact-input input {
+      width: 95%;
+    }
   }
-  #logos {
-    gap: 3em;
-  }
-  .ionicon {
-    width: 35px;
-  }
-}
-@media screen and (max-width: 375px) {
-  h1 {
-    font-size: 1.75em;
-  }
-  #index-content-cta {
-    padding: 0 0.5em;
-  }
-  #index-content-quote {
-    padding: 0 0.5em;
-  }
-  #contact {
-    width: 80%;
-  }
-  #contact-form {
-    padding: 1.5em 1em;
-  }
-  .contact-input input {
-    width: 95%;
-    
-  }
-}
-@media screen and (max-width: 350px) {
-  #index-content-1 {
-    font-size: 1.25em;
-  }
-  #index-content-3 {
-    font-size: 1em;
+  @media screen and (max-width: 350px) {
+    #index-content-1 {
+      font-size: 1.25em;
+    }
+    #index-content-3 {
+      font-size: 1em;
+    }
   }
 }
