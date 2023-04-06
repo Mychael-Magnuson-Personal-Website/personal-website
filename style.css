@@ -853,7 +853,8 @@ Styling the Contact Me Page: contact.html
     #contact-form {
       padding: 1.5em 1em;
     }
-    .contact-input input {
+    .contact-input input,
+    .contact-input textarea {
       width: 95%;
     }
   }
