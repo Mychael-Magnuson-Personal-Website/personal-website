@@ -332,7 +332,8 @@ Styling the Contact Me Page: contact.html
   box-shadow: 0.3em 0.3em 0.25em 0.025em #e1d8d0;
 }
 #contact-form label,
-#contact-form input {
+#contact-form input,
+#contact-form textarea {
   font-size: 1.5em;
   color: #2a2f34;
 }
@@ -340,7 +341,8 @@ Styling the Contact Me Page: contact.html
   display: flex;
   flex-flow: column wrap;
 }
-.contact-input input {
+.contact-input input,
+.contact-input textarea {
   border-radius: 0.4em;
   border: none;
   width: 95%;
@@ -348,7 +350,11 @@ Styling the Contact Me Page: contact.html
   font-weight: 300;
   background-color: #fffcf8;
 }
-.contact-input input::placeholder {
+.contact-input textarea {
+  resize: none;
+}
+.contact-input input::placeholder,
+.contact-input textarea::placeholder {
   opacity: 0.6;
   font-weight: 300;
   z-index: 0;
@@ -388,7 +394,8 @@ Styling the Contact Me Page: contact.html
     font-size: 3em;
   }
   #contact-form label,
-  #contact-form input {
+  #contact-form input,
+  #contact-form textarea {
     font-size: 2em;
   }
 }
@@ -683,7 +690,8 @@ Styling the Contact Me Page: contact.html
   }
 
   #contact-form label,
-  #contact-form input {
+  #contact-form input,
+  #contact-form textarea {
     font-size: 1.2em;
   }
 
