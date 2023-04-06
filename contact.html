@@ -52,13 +52,18 @@
     <main id="contact-main">
       <div id="contact">
         <h2 id="contact-title">Feel free to reach out to me below!</h2>
-        <form id="contact-form">
+        <form
+          action="https://script.google.com/macros/s/AKfycbzdAzzkqsEINF5RtBSpYwZJCmjlChr06grOUl0qvJSFTwUoOJO1USMMkjdw2bjC76G9/exec"
+          method="POST"
+          id="contact-form"
+          class="form"
+        >
           <div class="contact-input">
             <label for="contact-name">Name</label>
             <input
               type="text"
               id="contact-name"
-              name="contact-name"
+              name="Name"
               placeholder="Luke Skywalker"
               required
             />
@@ -68,21 +73,21 @@
             <input
               type="email"
               id="contact-email"
-              name="contact-email"
+              name="Email"
               placeholder="LastJediIV@gmail.com"
               required
             />
           </div>
           <div class="contact-input">
             <label for="contact-additional">Additional Info</label>
-            <input
+            <textarea
               type="text"
               id="contact-additional"
-              name="contact-additional"
+              name="Additional"
               placeholder="I wanted to reach out to you about... "
-            />
+            ></textarea>
           </div>
-          <input type="submit" id="contact-submit" />
+          <input type="submit" id="contact-submit" class="submit" />
         </form>
       </div>
     </main>
