@@ -10,15 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="script.js" async></script>
+
     <title>Mychael Magnuson Personal Website</title>
   </head>
   <body>
@@ -30,21 +22,30 @@
       Pages should include "Home", "About", and "Portfolio" -->
       <div class="nav-cont flex-row main-nav">
         <ul class="nav-cont flex-row">
-          <!-- Link to the index.html -->
+          <!-- Link to the index.html: Leads to the Landing Page-->
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <!-- Link to the about.html -->
+          <!-- Link to the about.html: Leads to the About Page -->
           <li><a href="about.html" class="nav-link">About</a></li>
-          <!-- Link to the portfolio.html -->
+          <!-- Link to the portfolio.html: Leads to the Portfolio Page -->
           <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <!-- Link to the contact.html: Leads to the Contact Page -->
+          <li>
+            <a href="contact.html" class="nav-link" id="contact-link"
+              >Contact Me</a
+            >
+          </li>
         </ul>
       </div>
+      <!-- Creating a navigation for Mobile device usage; works when viewport reaches ~"tablet" screen size -->
       <button class="btn-mobile-nav">
+        <!-- Menu Icon Button for the navigation: When pressed it will open a navigation for mobile usage -->
         <ion-icon
           class="icon-mobile-nav"
           name="menu-outline"
           role="img"
           aria-label="menu outline"
         ></ion-icon>
+        <!-- Closing icon that toggles with the menu icon: requires CSS and JS to achieve this -->
         <ion-icon
           class="icon-mobile-nav"
           name="close-outline"
@@ -53,48 +54,52 @@
         ></ion-icon>
       </button>
     </header>
-    </header>
     <main>
+      <!-- Section container for adding grid and styling -->
       <section id="index-content-cont" clas="content">
+        <!-- Image on landing page to help drive the content -->
         <div id="index-img-div">
-          <!-- ADD: At least one photo --><!-- NEED: <img/> -->
+          <!-- ADD: At least one photo -->
           <img
-            src="img/personalPhoto.JPG"
+            src="img/personalPhoto.jpg"
             alt="Personal portrait of Mychael Magnuson"
             id="index-portrait"
           />
         </div>
+        <!-- Container for the content heading and paragraph -->
         <div id="index-content-cta">
-            <h3 id="index-content-1">Leader, Student, Future Developer</h3>
-            <!-- ADD: A mission statement/quote/core value -->
-            <p id="index-content-2">
-              Determined to become a Developer and prove my skills. Interested in
-              sharing my skills and passion to work and collaborate in effective
-              teams for successful project outcomes.
-            </p>
+          <h3 id="index-content-1">Leader, Student, Future Developer</h3>
+          <!-- ADD: A mission statement/quote/core value -->
+          <p id="index-content-2">
+            Determined to become a Developer and prove my skills. Interested in
+            sharing my skills and passion to work and collaborate in effective
+            teams for successful project outcomes.
+          </p>
         </div>
-
-          <!-- NEED: An element to hold text --><!-- ADD: Something that defines you -->
+        <!-- Content container for quote and quote credit -->
         <div id="index-content-quote">
-            <p id="index-content-3">
-              “All We Have To Decide Is What To Do With The Time That Is Given To
-              Us.”
-            </p>
-            <p id="index-content-4">
-              Gandalf the Grey, 'The Fellowship of the Ring' (2001)
-            </p>
+          <p id="index-content-3">
+            “All We Have To Decide Is What To Do With The Time That Is Given To
+            Us.”
+          </p>
+          <p id="index-content-4">
+            Gandalf the Grey, 'The Fellowship of the Ring' (2001)
+          </p>
         </div>
-       
       </section>
     </main>
+    <!-- Universal Footer -->
     <footer>
       <div id="footer-cont" class="flex-row">
         <p>Copyright &copy; Mychael Magnuson 2023</p>
+        <!-- Logos that can placed in a flexbox and styled -->
         <div id="logos" class="flex-row">
+          <!-- github logo/link -->
           <a
             href="https://github.com/Mychael-FEWD"
             target="_blank"
             class="footer-logo"
+            id="gitHub-logo"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               class="ionicon"
@@ -105,10 +110,12 @@
               />
             </svg>
           </a>
+          <!-- linkedin logo/link -->
           <a
             href="https://www.linkedin.com/in/mychael-magnuson-8489a8202/"
             target="_blank"
             class="footer-logo"
+            id="linkedIn-logo"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,10 +127,12 @@
               />
             </svg>
           </a>
+          <!-- twitter logo/link -->
           <a
             href="https://twitter.com/justmemychael"
             target="_blank"
             class="footer-logo"
+            id="Twitter-logo"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               class="ionicon"
@@ -137,5 +146,14 @@
         </div>
       </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js" async></script>
   </body>
 </html>

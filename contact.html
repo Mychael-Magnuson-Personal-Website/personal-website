@@ -10,8 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-
-    <title>Mychael Magnuson Personal Website: Portfolio Page</title>
+    <title>Mychael Magnuson Personal Website</title>
   </head>
   <body>
     <!-- Universal Header -->
@@ -54,53 +53,48 @@
         ></ion-icon>
       </button>
     </header>
-    <main id="portfolio-main">
-      <!-- The portfolio page is the meat and potatoes of your personal site, here you want 
-        to include the projects you have worked on. For each project you wish to showcase, 
-        you should include the name of your project, a brief description, a screenshot, 
-        and a link to where it lives on the web. -->
-      <article class="portfolio-flex-cont flex-row">
-        <a
-          href="https://omnifood-mychael.netlify.app/"
-          target="_blank"
-          class="portfolio-img"
-          ><img
-            src="img/OmnifoodProject.jpg"
-            alt="Landing page for Omnifood Project"
-        /></a>
-        <div class="portfolio-content-div">
-          <h3>Omnifood</h3>
-          <p>
-            This is a project for a faux company called Omnifood; a project I
-            completed for a different course that I took to test html and css
-            skills. This project was built to be responsive as well and should
-            adjust based on screen sizes. To check out the website, click on the
-            image!
-          </p>
-        </div>
-      </article>
-      <article class="portfolio-flex-cont flex-row">
-        <a
-          href="https://slate-venues-prototype.netlify.app/"
-          target="_blank"
-          class="portfolio-img"
-          ><img
-            src="img/SlateVenuesProject.JPG"
-            alt="Landing page for Slate Venues Project"
-        /></a>
-        <div class="portfolio-content-div">
-          <h3>Slate Venues Prototype</h3>
-          <p>
-            This was a practical real world project that is still in progress to
-            be completed later; it is a prototype website for a wedding venue I
-            previously worked at, all photos shown in the project are real
-            photos from different events at the venue. The website is not
-            complete however, so please note that some features may not work,
-            but there is a submission form at the bottom that is functional. To
-            check out the website, click on the image!
-          </p>
-        </div>
-      </article>
+    <main id="contact-main">
+      <div id="contact">
+        <h2 id="contact-title">Feel free to reach out to me below!</h2>
+        <form
+          action="https://script.google.com/macros/s/AKfycbzdAzzkqsEINF5RtBSpYwZJCmjlChr06grOUl0qvJSFTwUoOJO1USMMkjdw2bjC76G9/exec"
+          method="POST"
+          target="_self"
+          id="contact-form"
+          class="form"
+        >
+          <div class="contact-input">
+            <label for="contact-name">Name</label>
+            <input
+              type="text"
+              id="contact-name"
+              name="Name"
+              placeholder="Luke Skywalker"
+              required
+            />
+          </div>
+          <div class="contact-input">
+            <label for="contact-email">Email Address</label>
+            <input
+              type="email"
+              id="contact-email"
+              name="Email"
+              placeholder="LastJediIV@gmail.com"
+              required
+            />
+          </div>
+          <div class="contact-input">
+            <label for="contact-additional">Additional Info</label>
+            <textarea
+              type="text"
+              id="contact-additional"
+              name="Additional"
+              placeholder="I wanted to reach out to you about... "
+            ></textarea>
+          </div>
+          <input type="submit" id="contact-submit" class="submit" />
+        </form>
+      </div>
     </main>
     <!-- Universal Footer -->
     <footer>
