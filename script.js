@@ -63,3 +63,9 @@ form.addEventListener("submit", (e) => {
 // https://script.google.com/macros/s/AKfycbzdAzzkqsEINF5RtBSpYwZJCmjlChr06grOUl0qvJSFTwUoOJO1USMMkjdw2bjC76G9/exec
 // View the Google Sheets Spreadsheet
 // https://docs.google.com/spreadsheets/d/19QwjONIaelgJ0uRBAMYxEfd-VjTkJGpDKoiYfPvmIC4/edit#gid=0
+
+// Resetting inputs so that they are clear whenever the user presses submit on the form
+document.querySelector("form").onsubmit = (e) => {
+  e.target.reset();
+  return false;
+};
