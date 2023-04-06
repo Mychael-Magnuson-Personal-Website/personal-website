@@ -14,20 +14,21 @@
     <title>Mychael Magnuson Personal Website: Portfolio Page</title>
   </head>
   <body>
+    <!-- Universal Header -->
     <header class="header-flex-cont flex-row header" id="myHeader">
       <!-- For uniformality we can include this header on all the html files and add 
         a class to style them the same so it looks smooth going across all pages  -->
       <h1>Mychael Magnuson</h1>
-      <!-- Create an element that will hold three tabs for navigating between pages. 
-      Pages should include "Home", "About", and "Portfolio" -->
+      <!-- Create an element that will hold tabs for navigating between pages. -->
       <div class="nav-cont flex-row main-nav">
         <ul class="nav-cont flex-row">
-          <!-- Link to the index.html -->
+          <!-- Link to the index.html: Leads to the Landing Page-->
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <!-- Link to the about.html -->
+          <!-- Link to the about.html: Leads to the About Page -->
           <li><a href="about.html" class="nav-link">About</a></li>
-          <!-- Link to the portfolio.html -->
+          <!-- Link to the portfolio.html: Leads to the Portfolio Page -->
           <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <!-- Link to the contact.html: Leads to the Contact Page -->
           <li>
             <a href="contact.html" class="nav-link" id="contact-link"
               >Contact Me</a
@@ -35,13 +36,16 @@
           </li>
         </ul>
       </div>
+      <!-- Creating a navigation for Mobile device usage; works when viewport reaches ~"tablet" screen size -->
       <button class="btn-mobile-nav">
+        <!-- Menu Icon Button for the navigation: When pressed it will open a navigation for mobile usage -->
         <ion-icon
           class="icon-mobile-nav"
           name="menu-outline"
           role="img"
           aria-label="menu outline"
         ></ion-icon>
+        <!-- Closing icon that toggles with the menu icon: requires CSS and JS to achieve this -->
         <ion-icon
           class="icon-mobile-nav"
           name="close-outline"
@@ -98,10 +102,13 @@
         </div>
       </article>
     </main>
+    <!-- Universal Footer -->
     <footer>
       <div id="footer-cont" class="flex-row">
         <p>Copyright &copy; Mychael Magnuson 2023</p>
+        <!-- Logos that can placed in a flexbox and styled -->
         <div id="logos" class="flex-row">
+          <!-- github logo/link -->
           <a
             href="https://github.com/Mychael-FEWD"
             target="_blank"
@@ -117,6 +124,7 @@
               />
             </svg>
           </a>
+          <!-- linkedin logo/link -->
           <a
             href="https://www.linkedin.com/in/mychael-magnuson-8489a8202/"
             target="_blank"
@@ -133,6 +141,7 @@
               />
             </svg>
           </a>
+          <!-- twitter logo/link -->
           <a
             href="https://twitter.com/justmemychael"
             target="_blank"
