@@ -15,6 +15,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   /* Only works if nothing is absolutely positioned in relation to the body */
   overflow-x: hidden;
@@ -115,9 +116,10 @@ Navigation Stylilng; part of the universal header; includes styling for mobile n
 #contact-link:visited {
   background-color: #d78540;
   color: #fffcf8;
-  padding: 0.1em 0.3em;
+  padding: 0.1em 0.3em 0.2em 0.3em;
   border-radius: 0.3em;
   transition: all 0.5s;
+  align-self: center;
 }
 
 .nav-link:hover,
@@ -269,6 +271,7 @@ STYLING FOR THE PORTFOLIO.HTML FILE
 }
 .portfolio-flex-cont {
   gap: 2em;
+  margin-bottom: 3em;
 }
 .portfolio-content-div {
   width: 30%;
@@ -300,7 +303,7 @@ STYLING FOR THE PORTFOLIO.HTML FILE
 Styling the Contact Me Page: contact.html
 *****************************************/
 #contact-main {
-  height: 73vh;
+  height: 100%;
 }
 #contact {
   display: flex;
