@@ -33,17 +33,17 @@ main {
 Creating a sticky header
 ************************/
 /* The sticky class is added to the header with JS when it reaches its scroll position */
-.sticky {
-  /* width: 97.5%; */
-  /* opacity: 0.9; */
+/* .sticky {
+  width: 97.5%;
+  opacity: 0.9;
   transition: all 0.5s;
-}
+} */
 
 /* Add some top padding to the page content to prevent sudden quick movement 
 (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+/* .sticky + .content {
   padding-top: 2em;
-}
+} */
 /********************************
 STYLING FOR THE INDEX.HTML FILE 
 ****************************** */
@@ -63,7 +63,7 @@ h1 {
   padding: 0.5em 1.5em;
   background-color: #fffcf8;
   justify-content: space-between;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   z-index: 1;
 }
@@ -92,10 +92,14 @@ Navigation Stylilng; part of the universal header; includes styling for mobile n
 .icon-mobile-nav {
   height: 2.5em;
   width: 2.5em;
-  color: black;
+  color: #343a40;
 }
 .icon-mobile-nav[name="close-outline"] {
   display: none;
+}
+.no-scroll {
+  overflow-y: hidden;
+  position: fixed;
 }
 
 /*************************************************************
@@ -641,7 +645,10 @@ Styling the Contact Me Page: contact.html
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0);
+    position: fixed;
+    margin-top: 0;
   }
+
   .nav-open .icon-mobile-nav[name="close-outline"] {
     display: block;
   }
@@ -650,8 +657,8 @@ Styling the Contact Me Page: contact.html
   }
   .nav-cont {
     flex-flow: column wrap;
-    gap: 1.5em;
-    font-size: 1.7em;
+    gap: 1em;
+    font-size: 1.5em;
     align-items: center;
     justify-content: center;
   }
@@ -798,7 +805,7 @@ Styling the Contact Me Page: contact.html
     }
     #contact-form input[type="submit"] {
       grid-column: span 2;
-      margin-top: 1em;
+      /* margin-top: 1em; */
     }
   }
   /* Creating style breakpoints that work for large phone screens all the way down to normal and small phones */
