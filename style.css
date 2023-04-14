@@ -806,7 +806,7 @@ Styling the Contact Me Page: contact.html
     }
     #contact-form input[type="submit"] {
       grid-column: span 2;
-      /* margin-top: 1em; */
+      margin-bottom: 1em;
     }
   }
   /* Creating style breakpoints that work for large phone screens all the way down to normal and small phones */
