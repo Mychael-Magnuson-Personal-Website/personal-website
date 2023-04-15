@@ -809,7 +809,7 @@ Styling the Contact Me Page: contact.html
 
     .contact-input {
       grid-column: span 2;
-      margin-bottom: 32px;
+      padding-bottom: 32px;
     }
 
     #contact-form input[type="submit"] {
