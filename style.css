@@ -795,21 +795,26 @@ Styling the Contact Me Page: contact.html
     .about-txt p {
       font-size: 1em;
     }
+
     #contact-title {
       font-size: 1.5em;
     }
+
     #contact-form {
       grid-template-rows: repeat(4, auto);
       column-gap: 0;
-      row-gap: 1em;
+      row-gap: 0;
       padding: 1.5em;
     }
+
     .contact-input {
       grid-column: span 2;
+      margin-bottom: 1.5em;
     }
+
     #contact-form input[type="submit"] {
       grid-column: span 2;
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
     }
   }
   /* Creating style breakpoints that work for large phone screens all the way down to normal and small phones */
@@ -863,9 +868,6 @@ Styling the Contact Me Page: contact.html
     }
     #contact {
       width: 80%;
-    }
-    #contact-form {
-      padding: 1.5em 1em;
     }
     .contact-input input,
     .contact-input textarea {
