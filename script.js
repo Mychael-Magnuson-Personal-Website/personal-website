@@ -14,12 +14,12 @@ const form = document.querySelector(".form");
 const submitButton = document.querySelector(".submit");
 
 // scriptURL from Block 12 Assignment
-// const scriptURL =
-//   "https://script.google.com/macros/s/1XTaVdkdAnzhAHoLOA-x0K4svtJOB9RUnp2OgudFCNoEE4Lo8muDKOgSO/exec";
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbxLZTlgHBunzjDAyvzTFB9AAQZS2vGT4hSZKlfMDVMQrrHEQwKDYO2-fo05BNfFegYWVg/exec";
 
 // scriptURL from personal Google sheets created
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbzdAzzkqsEINF5RtBSpYwZJCmjlChr06grOUl0qvJSFTwUoOJO1USMMkjdw2bjC76G9/exec";
+// const scriptURL =
+// "https://script.google.com/macros/s/AKfycbzdAzzkqsEINF5RtBSpYwZJCmjlChr06grOUl0qvJSFTwUoOJO1USMMkjdw2bjC76G9/exec";
 
 form.addEventListener("submit", (e) => {
   submitButton.disabled = true;
