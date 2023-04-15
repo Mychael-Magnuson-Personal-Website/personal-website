@@ -353,8 +353,8 @@ Styling the Contact Me Page: contact.html
 .contact-input textarea {
   border-radius: 0.4em;
   border: none;
-  width: 95%;
-  padding: 0.25em;
+  /* width: 100%; */
+  padding: 0.3em;
   font-weight: 300;
   background-color: #fffcf8;
 }
@@ -371,7 +371,7 @@ Styling the Contact Me Page: contact.html
 #contact-form input[type="submit"] {
   border-radius: 0.4em;
   border: none;
-  width: 99%;
+  width: 100%;
   height: 2em;
   align-self: end;
   background-color: #fffcf8;
@@ -803,18 +803,16 @@ Styling the Contact Me Page: contact.html
     #contact-form {
       /* grid-template-rows: repeat(4, auto); */
       /* column-gap: 0; */
-      row-gap: 0;
+      /* row-gap: 0; */
+      display: flex;
+      flex-flow: column wrap;
+      gap: 2em;
+      align-content: flex-start;
       padding: 1.5em;
     }
 
-    .contact-input {
-      grid-column: span 2;
-      padding-bottom: 16px;
-    }
-
     #contact-form input[type="submit"] {
-      grid-column: span 2;
-      margin-bottom: 8px;
+      padding: 0;
     }
   }
   /* Creating style breakpoints that work for large phone screens all the way down to normal and small phones */
