@@ -814,7 +814,7 @@ Styling the Contact Me Page: contact.html
 
     #contact-form input[type="submit"] {
       grid-column: span 2;
-      margin-bottom: 0.5em;
+      margin-bottom: 8px;
     }
   }
   /* Creating style breakpoints that work for large phone screens all the way down to normal and small phones */
